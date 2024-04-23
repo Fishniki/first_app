@@ -17,7 +17,7 @@ class _DiceRollerState extends State<DiceRoller> {
 
   void kocokdadu() {
     setState(() {
-      angkadadu = randomizer.nextInt(5) + 1; //syntax tersebut mekukan gacha bilangan randon yang di mulai dari satu, dan terdapat 6 angka
+      angkadadu = randomizer.nextInt(6) + 1; //syntax tersebut mekukan gacha bilangan randon yang di mulai dari satu, dan terdapat 6 angka
     });
   }
 
@@ -29,8 +29,9 @@ class _DiceRollerState extends State<DiceRoller> {
             mainAxisSize: MainAxisSize.min,
         children: [
           Image.asset(
-            "assets/img/waifu-$angkadadu.png",
+            "assets/img/waifu-$angkadadu.png",  
             width: 200,
+            fit: BoxFit.cover,
           ),
           
           const SizedBox(
